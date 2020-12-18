@@ -86,6 +86,12 @@
     <Compile Include="FrmChecador.Designer.cs">
       <DependentUpon>FrmChecador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCifrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCifrado.Designer.cs">
+      <DependentUpon>FrmCifrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
