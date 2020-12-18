@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmChecador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChecador.Designer.cs">
+      <DependentUpon>FrmChecador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
