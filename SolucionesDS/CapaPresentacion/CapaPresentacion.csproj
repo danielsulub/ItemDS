@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAcceso.Designer.cs">
+      <DependentUpon>FrmAcceso.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAdministrarPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
