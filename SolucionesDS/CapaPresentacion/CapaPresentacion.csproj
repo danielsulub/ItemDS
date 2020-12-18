@@ -62,6 +62,12 @@
     <Compile Include="FrmAcceso.Designer.cs">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAcercaDe.Designer.cs">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAdministrarPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
