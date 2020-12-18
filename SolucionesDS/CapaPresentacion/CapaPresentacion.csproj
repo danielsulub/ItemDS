@@ -62,6 +62,12 @@
     <Compile Include="FrmDocumento.Designer.cs">
       <DependentUpon>FrmDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmExplorador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExplorador.Designer.cs">
+      <DependentUpon>FrmExplorador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPeriodo.cs">
       <SubType>Form</SubType>
     </Compile>
