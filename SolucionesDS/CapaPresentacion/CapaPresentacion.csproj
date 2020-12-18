@@ -68,6 +68,12 @@
     <Compile Include="FrmExplorador.Designer.cs">
       <DependentUpon>FrmExplorador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventario.Designer.cs">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
