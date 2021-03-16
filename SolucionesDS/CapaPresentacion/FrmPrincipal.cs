@@ -17,6 +17,7 @@ namespace CapaPresentacion
 {
     public partial class FrmPrincipal : XtraForm
     {
+        private string nombreSistema = "ItemDS";
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -24,11 +25,14 @@ namespace CapaPresentacion
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            Text = "ItemDS";
-            Tag = "ItemDS";
+            //Tamaño del form principal: 1020, 580            
+            Text = nombreSistema;
+            Tag = nombreSistema;
             pgbAvance.Visibility = BarItemVisibility.Never;
             Icon = Resources.ItemDS;
-        }
+            mostrarMensaje("Hola, Bienvenido", Color.Empty);
+            
+    }
 
         private void barAndDockingController1_Changed(object sender, EventArgs e)
         {
@@ -37,56 +41,56 @@ namespace CapaPresentacion
 
         private void btnInicio_ItemClick(object sender, ItemClickEventArgs e)
         {
-            /*cerrarFormulario<FrmProducto>();
+            cerrarFormulario<FrmProducto>();
             cerrarFormulario<FrmDocumento>();
             cerrarFormulario<FrmPeriodo>();
             cerrarFormulario<FrmExplorador>();
             cerrarFormulario<FrmInventario>();
             cerrarFormulario<FrmPedidos>();
             cerrarFormulario<FrmChecador>();
-            cerrarFormulario<FrmReportes>();*/
+            cerrarFormulario<FrmReportes>();
             pnlContenedorFrm.BorderStyle = BorderStyles.Default;
             Text = Convert.ToString(Tag);
         }
 
         private void btnProducto_ItemClick(object sender, ItemClickEventArgs e)
         {
-            /*abrirFormulario<FrmProducto>();*/
+            abrirFormulario<FrmProducto>();
         }
 
         private void btnDocumento_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            abrirFormulario<FrmDocumento>();
         }
 
         private void btnPeriodo_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            abrirFormulario<FrmPeriodo>();
         }
 
         private void btnExplorador_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            abrirFormulario<FrmExplorador>();
         }
 
         private void btnPedidos_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            abrirFormulario<FrmPedidos>();
         }
 
         private void btnInventario_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            abrirFormulario<FrmInventario>();
         }
 
         private void btnChecadorPrecios_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            abrirFormulario<FrmChecador>();
         }
 
         private void btnReportes_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            abrirFormulario<FrmReportes>();
         }
 
         private void abrirFormulario<miForm>() where miForm : XtraForm, new()
@@ -133,6 +137,9 @@ namespace CapaPresentacion
         private void mostrarMensaje(string mensaje, Color colorCinta)
         {
             lblMensaje.Caption = mensaje;
+            lblMensaje.ItemAppearance.Normal.BackColor = colorCinta;
+            lblIVA.ItemAppearance.Normal.BackColor = colorCinta;
+            bar3.BarAppearance.Normal.BackColor = colorCinta;
         }
     }
 }

@@ -28,11 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.pnlFondo = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFondo)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pnlFondo
+            // 
+            this.pnlFondo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFondo.Location = new System.Drawing.Point(0, 0);
+            this.pnlFondo.LookAndFeel.SkinName = "Office 2019 Colorful";
+            this.pnlFondo.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlFondo.Name = "pnlFondo";
+            this.pnlFondo.Size = new System.Drawing.Size(1016, 454);
+            this.pnlFondo.TabIndex = 0;
+            // 
+            // FrmDocumento
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "FrmDocumento";
+            this.ClientSize = new System.Drawing.Size(1016, 454);
+            this.Controls.Add(this.pnlFondo);
+            this.LookAndFeel.SkinName = "McSkin";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.Name = "FrmDocumento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Documento";
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFondo)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DevExpress.XtraEditors.PanelControl pnlFondo;
     }
 }

@@ -29,6 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnInicio = new DevExpress.XtraBars.BarButtonItem();
@@ -223,7 +243,7 @@
             this.repositoryCboSucursal.AppearanceFocused.Options.UseForeColor = true;
             this.repositoryCboSucursal.AutoHeight = false;
             this.repositoryCboSucursal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Seleccionar sucursal", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboSucursal.Name = "repositoryCboSucursal";
             // 
             // bar2
@@ -278,7 +298,7 @@
             // lblIVA
             // 
             this.lblIVA.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.lblIVA.Caption = "iva 16%";
+            this.lblIVA.Caption = "iva 8%";
             this.lblIVA.Id = 13;
             this.lblIVA.Name = "lblIVA";
             // 
@@ -294,7 +314,7 @@
             // 
             this.repositoryCboImpresora.AutoHeight = false;
             this.repositoryCboImpresora.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Seleccionar impresora", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboImpresora.Name = "repositoryCboImpresora";
             // 
             // cboEtiqueta
@@ -309,7 +329,7 @@
             // 
             this.repositoryCboEtiqueta.AutoHeight = false;
             this.repositoryCboEtiqueta.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "combo", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Seleccionar etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboEtiqueta.Name = "repositoryCboEtiqueta";
             // 
             // cboMedidaEtiqueta
@@ -324,7 +344,7 @@
             // 
             this.repositoryCboMedidaEtiqueta.AutoHeight = false;
             this.repositoryCboMedidaEtiqueta.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "Seleccionar medida etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboMedidaEtiqueta.Name = "repositoryCboMedidaEtiqueta";
             // 
             // mnuConfiguracion
@@ -354,7 +374,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 523);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 533);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1018, 25);
             // 
@@ -364,7 +384,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 476);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 486);
             // 
             // barDockControlRight
             // 
@@ -372,7 +392,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1018, 47);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 476);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 486);
             // 
             // pnlContenedorFrm
             // 
@@ -381,14 +401,14 @@
             this.pnlContenedorFrm.LookAndFeel.SkinName = "Office 2019 Colorful";
             this.pnlContenedorFrm.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlContenedorFrm.Name = "pnlContenedorFrm";
-            this.pnlContenedorFrm.Size = new System.Drawing.Size(1018, 476);
+            this.pnlContenedorFrm.Size = new System.Drawing.Size(1018, 486);
             this.pnlContenedorFrm.TabIndex = 4;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 548);
+            this.ClientSize = new System.Drawing.Size(1018, 558);
             this.Controls.Add(this.pnlContenedorFrm);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
