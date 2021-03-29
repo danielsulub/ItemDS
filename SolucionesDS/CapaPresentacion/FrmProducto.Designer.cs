@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -96,10 +96,8 @@
             this.pnlFondo.Controls.Add(this.pnlEncabezado);
             this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFondo.Location = new System.Drawing.Point(0, 0);
-            this.pnlFondo.LookAndFeel.SkinName = "Office 2019 Colorful";
-            this.pnlFondo.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlFondo.Name = "pnlFondo";
-            this.pnlFondo.Size = new System.Drawing.Size(1016, 454);
+            this.pnlFondo.Size = new System.Drawing.Size(1016, 444);
             this.pnlFondo.TabIndex = 0;
             // 
             // pnlEstiloEtiquetasCuerpo
@@ -108,14 +106,14 @@
             this.pnlEstiloEtiquetasCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEstiloEtiquetasCuerpo.Location = new System.Drawing.Point(187, 85);
             this.pnlEstiloEtiquetasCuerpo.Name = "pnlEstiloEtiquetasCuerpo";
-            this.pnlEstiloEtiquetasCuerpo.Size = new System.Drawing.Size(829, 319);
+            this.pnlEstiloEtiquetasCuerpo.Size = new System.Drawing.Size(829, 309);
             this.pnlEstiloEtiquetasCuerpo.TabIndex = 4;
             // 
             // pnlEstiloEtiquetasPie
             // 
             this.pnlEstiloEtiquetasPie.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlEstiloEtiquetasPie.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlEstiloEtiquetasPie.Location = new System.Drawing.Point(187, 404);
+            this.pnlEstiloEtiquetasPie.Location = new System.Drawing.Point(187, 394);
             this.pnlEstiloEtiquetasPie.Name = "pnlEstiloEtiquetasPie";
             this.pnlEstiloEtiquetasPie.Size = new System.Drawing.Size(829, 50);
             this.pnlEstiloEtiquetasPie.TabIndex = 3;
@@ -142,7 +140,7 @@
             // 
             // chkSelecEtiquetaAuto
             // 
-            this.chkSelecEtiquetaAuto.Location = new System.Drawing.Point(219, 8);
+            this.chkSelecEtiquetaAuto.Location = new System.Drawing.Point(260, 8);
             this.chkSelecEtiquetaAuto.Name = "chkSelecEtiquetaAuto";
             this.chkSelecEtiquetaAuto.Properties.OffText = "";
             this.chkSelecEtiquetaAuto.Properties.OnText = "";
@@ -154,13 +152,9 @@
             // 
             this.cboVersionEtiqueta.Location = new System.Drawing.Point(49, 6);
             this.cboVersionEtiqueta.Name = "cboVersionEtiqueta";
-            this.cboVersionEtiqueta.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cboVersionEtiqueta.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboVersionEtiqueta.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.cboVersionEtiqueta.Properties.AppearanceFocused.Options.UseForeColor = true;
             this.cboVersionEtiqueta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Seleccionar versión etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.cboVersionEtiqueta.Size = new System.Drawing.Size(164, 20);
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "Seleccionar versión etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.cboVersionEtiqueta.Size = new System.Drawing.Size(205, 20);
             this.cboVersionEtiqueta.TabIndex = 0;
             // 
             // pnlArticulos
@@ -171,16 +165,22 @@
             this.pnlArticulos.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlArticulos.Location = new System.Drawing.Point(0, 35);
             this.pnlArticulos.Name = "pnlArticulos";
-            this.pnlArticulos.Size = new System.Drawing.Size(187, 419);
+            this.pnlArticulos.Size = new System.Drawing.Size(187, 409);
             this.pnlArticulos.TabIndex = 1;
             // 
             // lbxArticulos
             // 
             this.lbxArticulos.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lbxArticulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbxArticulos.Items.AddRange(new object[] {
+            "uno",
+            "dos",
+            "tres",
+            "cuatro",
+            "cinco"});
             this.lbxArticulos.Location = new System.Drawing.Point(0, 33);
             this.lbxArticulos.Name = "lbxArticulos";
-            this.lbxArticulos.Size = new System.Drawing.Size(187, 386);
+            this.lbxArticulos.Size = new System.Drawing.Size(187, 376);
             this.lbxArticulos.TabIndex = 1;
             // 
             // pnlArticulosEncabezado
@@ -206,12 +206,8 @@
             // 
             this.cboFiltro.Location = new System.Drawing.Point(43, 6);
             this.cboFiltro.Name = "cboFiltro";
-            this.cboFiltro.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cboFiltro.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboFiltro.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.cboFiltro.Properties.AppearanceFocused.Options.UseForeColor = true;
             this.cboFiltro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Seleccionar filtro de búsqueda", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Seleccionar filtro de búsqueda", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cboFiltro.Size = new System.Drawing.Size(143, 20);
             this.cboFiltro.TabIndex = 0;
             // 
@@ -231,7 +227,7 @@
             // 
             // lblNumeroEtiquetas
             // 
-            this.lblNumeroEtiquetas.Location = new System.Drawing.Point(195, 11);
+            this.lblNumeroEtiquetas.Location = new System.Drawing.Point(214, 11);
             this.lblNumeroEtiquetas.Name = "lblNumeroEtiquetas";
             this.lblNumeroEtiquetas.Size = new System.Drawing.Size(73, 13);
             this.lblNumeroEtiquetas.TabIndex = 4;
@@ -247,28 +243,40 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(329, 3);
+            this.btnImprimir.Location = new System.Drawing.Point(370, 3);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(71, 29);
             this.btnImprimir.TabIndex = 2;
             this.btnImprimir.Text = "&Imprimir";
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // txtNumeroEtiquetas
             // 
             this.txtNumeroEtiquetas.EditValue = new decimal(new int[] {
-            0,
+            1,
             0,
             0,
             0});
-            this.txtNumeroEtiquetas.Location = new System.Drawing.Point(274, 8);
+            this.txtNumeroEtiquetas.Location = new System.Drawing.Point(293, 8);
             this.txtNumeroEtiquetas.Name = "txtNumeroEtiquetas";
-            this.txtNumeroEtiquetas.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtNumeroEtiquetas.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNumeroEtiquetas.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtNumeroEtiquetas.Properties.AppearanceFocused.Options.UseForeColor = true;
             this.txtNumeroEtiquetas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtNumeroEtiquetas.Size = new System.Drawing.Size(46, 20);
+            this.txtNumeroEtiquetas.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtNumeroEtiquetas.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtNumeroEtiquetas.Properties.IsFloatValue = false;
+            this.txtNumeroEtiquetas.Properties.MaskSettings.Set("mask", "N00");
+            this.txtNumeroEtiquetas.Properties.MaxLength = 4;
+            this.txtNumeroEtiquetas.Properties.MaxValue = new decimal(new int[] {
+            1985,
+            0,
+            0,
+            0});
+            this.txtNumeroEtiquetas.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtNumeroEtiquetas.Size = new System.Drawing.Size(52, 20);
             this.txtNumeroEtiquetas.TabIndex = 1;
             this.txtNumeroEtiquetas.Click += new System.EventHandler(this.txtNumeroEtiquetas_Click);
             this.txtNumeroEtiquetas.Enter += new System.EventHandler(this.txtNumeroEtiquetas_Enter);
@@ -277,12 +285,8 @@
             // 
             this.txtBuscar.Location = new System.Drawing.Point(43, 8);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtBuscar.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtBuscar.Properties.AppearanceFocused.Options.UseForeColor = true;
             this.txtBuscar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "Clear", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Limpiar búsqueda", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "Clear", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Limpiar búsqueda", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search, "Search", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "Realizar búsqueda", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtBuscar.Size = new System.Drawing.Size(143, 20);
             this.txtBuscar.TabIndex = 0;
@@ -292,10 +296,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 454);
+            this.ClientSize = new System.Drawing.Size(1016, 444);
             this.Controls.Add(this.pnlFondo);
-            this.LookAndFeel.SkinName = "McSkin";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "FrmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Producto";

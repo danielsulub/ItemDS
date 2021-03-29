@@ -18,6 +18,7 @@ namespace CapaPresentacion
     public partial class FrmPrincipal : XtraForm
     {
         private string nombreSistema = "ItemDS";
+        private string nombreSkin = "McSkin";
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -26,16 +27,62 @@ namespace CapaPresentacion
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             //Tamaño del form principal: 1020, 580            
+            LookAndFeel.SkinName = nombreSkin;
+            CambiarAppearanceFocused();
             Text = nombreSistema;
             Tag = nombreSistema;
             pgbAvance.Visibility = BarItemVisibility.Never;
+            bar1.Visible = true; //Barra de herramientas
+            bar2.Visible = false; //Barra de menus
             Icon = Resources.ItemDS;
-            mostrarMensaje("Hola, Bienvenido", Color.Empty);
+            mostrarMensaje("Hola, Bienvenido al sistema", Color.Empty);            
             
-    }
+            UserLookAndFeel.Default.SetSkinStyle("Office 2019 Colorful"); //Skin de los controles internos de la pantalla
+            LookAndFeel.SkinName = "McSkin"; //Skin de la pantalla principal
+            barAndDockingController1.LookAndFeel.SkinName = "McSkin";            
+            pnlContenedorFrm.LookAndFeel.SkinName = UserLookAndFeel.Default.SkinName;
+        }
+
+        public void CambiarAppearanceFocused()
+        {
+            string backColorRGB = "255,255,192";
+            string foreColorRGB = "64,64,64";
+
+            int backColorR;
+            int backColorG;
+            int backColorB;
+
+            int foreColorR;
+            int foreColorG;
+            int foreColorB;
+
+            string[] coloresRGBBackColor = backColorRGB.Split(',');
+            string[] coloresRGBForeColor = foreColorRGB.Split(',');
+
+            backColorR = Convert.ToInt32(coloresRGBBackColor[0]);
+            backColorG = Convert.ToInt32(coloresRGBBackColor[1]);
+            backColorB = Convert.ToInt32(coloresRGBBackColor[2]);
+
+            foreColorR = Convert.ToInt32(coloresRGBForeColor[0]);
+            foreColorG = Convert.ToInt32(coloresRGBForeColor[1]);
+            foreColorB = Convert.ToInt32(coloresRGBForeColor[2]);
+
+            cboSucursal.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
+            cboSucursal.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
+
+            cboImpresora.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
+            cboImpresora.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
+
+            cboEtiqueta.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
+            cboEtiqueta.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
+
+            cboMedidaEtiqueta.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
+            cboMedidaEtiqueta.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
+        }
 
         private void barAndDockingController1_Changed(object sender, EventArgs e)
         {
+            barAndDockingController1.LookAndFeel.SkinName = UserLookAndFeel.Default.SkinName;
             pnlContenedorFrm.LookAndFeel.SkinName = UserLookAndFeel.Default.SkinName;
         }
 
@@ -49,6 +96,7 @@ namespace CapaPresentacion
             cerrarFormulario<FrmPedidos>();
             cerrarFormulario<FrmChecador>();
             cerrarFormulario<FrmReportes>();
+            cerrarFormulario<FrmPermisoAcceso>();
             pnlContenedorFrm.BorderStyle = BorderStyles.Default;
             Text = Convert.ToString(Tag);
         }
@@ -90,7 +138,7 @@ namespace CapaPresentacion
 
         private void btnReportes_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmReportes>();
+            abrirFormulario<FrmReportes>();            
         }
 
         private void abrirFormulario<miForm>() where miForm : XtraForm, new()
@@ -103,8 +151,8 @@ namespace CapaPresentacion
             {
                 frm = new miForm();
                 AddOwnedForm(frm); //Nuevo borrar
-                frm.TopLevel = false;
-                frm.Size = Size;
+                frm.TopLevel = false;                
+                frm.Size = Size; //frm.Size = pnlContenedorFrm.Size;
                 frm.FormBorderStyle = FormBorderStyle.None;
                 frm.Dock = DockStyle.Fill;
                 pnlContenedorFrm.BorderStyle = BorderStyles.NoBorder;

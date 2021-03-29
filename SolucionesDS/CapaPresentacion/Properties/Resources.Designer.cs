@@ -91,6 +91,16 @@ namespace CapaPresentacion.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoDesarrollo {
+            get {
+                object obj = ResourceManager.GetObject("logoDesarrollo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage Perfil {
@@ -103,9 +113,49 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ucEtiqueta0 {
+        internal static System.Drawing.Bitmap ucEtiqueta1 {
             get {
-                object obj = ResourceManager.GetObject("ucEtiqueta0", resourceCulture);
+                object obj = ResourceManager.GetObject("ucEtiqueta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ucEtiqueta2 {
+            get {
+                object obj = ResourceManager.GetObject("ucEtiqueta2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ucEtiqueta3 {
+            get {
+                object obj = ResourceManager.GetObject("ucEtiqueta3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ucEtiqueta4 {
+            get {
+                object obj = ResourceManager.GetObject("ucEtiqueta4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ucEtiqueta5 {
+            get {
+                object obj = ResourceManager.GetObject("ucEtiqueta5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

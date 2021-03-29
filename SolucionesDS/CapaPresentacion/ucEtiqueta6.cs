@@ -11,30 +11,29 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class ucEtiqueta0 : XtraUserControl
+    public partial class ucEtiqueta6 : XtraUserControl
     {
 
-        private static ucEtiqueta0 _instance;
+        private static ucEtiqueta6 _instance;
 
-        public static ucEtiqueta0 Instance
+        public static ucEtiqueta6 Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new ucEtiqueta0();
+                    _instance = new ucEtiqueta6();
                 return _instance;
             }
         }
 
-        public ucEtiqueta0()
+        public void setDatos(string mensaje)
+        {
+            lblMensaje.Text = mensaje;
+        }
+
+        public ucEtiqueta6()
         {
             InitializeComponent();
         }
-
-        public void setDatos(string mensaje)
-        {
-            lblMensaje.Text = mensaje;            
-        }
-        
     }
 }

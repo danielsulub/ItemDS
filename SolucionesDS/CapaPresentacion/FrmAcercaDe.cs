@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace CapaPresentacion
 {
-    public partial class FrmAcercaDe : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAcercaDe : XtraForm
     {
         public FrmAcercaDe()
         {

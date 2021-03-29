@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacion
 {
-    partial class ucEtiqueta0
+    partial class ucEtiqueta6
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,22 +34,19 @@ namespace CapaPresentacion
             // 
             // lblMensaje
             // 
-            this.lblMensaje.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMensaje.Location = new System.Drawing.Point(421, 16);
+            this.lblMensaje.Location = new System.Drawing.Point(367, 33);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(40, 13);
             this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "Mensaje";
             // 
-            // ucEtiqueta0
+            // ucEtiqueta6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CapaPresentacion.Properties.Resources.ucEtiqueta0;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Controls.Add(this.lblMensaje);
-            this.DoubleBuffered = true;
-            this.Name = "ucEtiqueta0";
+            this.Name = "ucEtiqueta6";
             this.Size = new System.Drawing.Size(829, 319);
             this.ResumeLayout(false);
             this.PerformLayout();

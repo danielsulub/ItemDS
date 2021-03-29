@@ -237,11 +237,6 @@
             // 
             // repositoryCboSucursal
             // 
-            this.repositoryCboSucursal.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.repositoryCboSucursal.AppearanceFocused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.repositoryCboSucursal.AppearanceFocused.Options.UseBackColor = true;
-            this.repositoryCboSucursal.AppearanceFocused.Options.UseForeColor = true;
-            this.repositoryCboSucursal.AutoHeight = false;
             this.repositoryCboSucursal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Seleccionar sucursal", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboSucursal.Name = "repositoryCboSucursal";
@@ -312,7 +307,6 @@
             // 
             // repositoryCboImpresora
             // 
-            this.repositoryCboImpresora.AutoHeight = false;
             this.repositoryCboImpresora.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Seleccionar impresora", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboImpresora.Name = "repositoryCboImpresora";
@@ -327,7 +321,6 @@
             // 
             // repositoryCboEtiqueta
             // 
-            this.repositoryCboEtiqueta.AutoHeight = false;
             this.repositoryCboEtiqueta.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "combo", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Seleccionar etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboEtiqueta.Name = "repositoryCboEtiqueta";
@@ -342,7 +335,6 @@
             // 
             // repositoryCboMedidaEtiqueta
             // 
-            this.repositoryCboMedidaEtiqueta.AutoHeight = false;
             this.repositoryCboMedidaEtiqueta.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "Seleccionar medida etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboMedidaEtiqueta.Name = "repositoryCboMedidaEtiqueta";
@@ -374,7 +366,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 533);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 523);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1018, 25);
             // 
@@ -384,7 +376,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 476);
             // 
             // barDockControlRight
             // 
@@ -392,7 +384,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1018, 47);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 476);
             // 
             // pnlContenedorFrm
             // 
@@ -401,20 +393,20 @@
             this.pnlContenedorFrm.LookAndFeel.SkinName = "Office 2019 Colorful";
             this.pnlContenedorFrm.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlContenedorFrm.Name = "pnlContenedorFrm";
-            this.pnlContenedorFrm.Size = new System.Drawing.Size(1018, 486);
+            this.pnlContenedorFrm.Size = new System.Drawing.Size(1018, 476);
             this.pnlContenedorFrm.TabIndex = 4;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 558);
+            this.ClientSize = new System.Drawing.Size(1018, 548);
             this.Controls.Add(this.pnlContenedorFrm);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.LookAndFeel.SkinName = "McSkin";
+            this.LookAndFeel.SkinName = "Office 2019 Colorful";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
