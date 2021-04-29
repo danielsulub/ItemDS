@@ -61,6 +61,12 @@
             this.btnChecadorPrecios = new DevExpress.XtraBars.BarButtonItem();
             this.btnReportes = new DevExpress.XtraBars.BarButtonItem();
             this.mnuPerfil = new DevExpress.XtraBars.BarSubItem();
+            this.subMnuPerfilEditar = new DevExpress.XtraBars.BarButtonItem();
+            this.subMnuPerfilUsuarios = new DevExpress.XtraBars.BarSubItem();
+            this.subMnuPerfilUsuariosPerfiles = new DevExpress.XtraBars.BarButtonItem();
+            this.subMnuPerfilUsuariosAdministrar = new DevExpress.XtraBars.BarButtonItem();
+            this.subMnuPerfilCerrarSesion = new DevExpress.XtraBars.BarButtonItem();
+            this.subMnuPerfilSalir = new DevExpress.XtraBars.BarButtonItem();
             this.cboSucursal = new DevExpress.XtraBars.BarEditItem();
             this.repositoryCboSucursal = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -76,6 +82,15 @@
             this.cboMedidaEtiqueta = new DevExpress.XtraBars.BarEditItem();
             this.repositoryCboMedidaEtiqueta = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.mnuConfiguracion = new DevExpress.XtraBars.BarSubItem();
+            this.mnuSkin = new DevExpress.XtraBars.BarSubItem();
+            this.subMnuSkinList = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.subMnuSkinPaleta = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.mnuBarrasMenu = new DevExpress.XtraBars.BarSubItem();
+            this.subMnuBarrasMenu = new DevExpress.XtraBars.BarToolbarsListItem();
+            this.btnActualizarPermisos = new DevExpress.XtraBars.BarButtonItem();
+            this.btnConfiguracion = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCifrar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAcercaDe = new DevExpress.XtraBars.BarButtonItem();
             this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -122,9 +137,24 @@
             this.cboImpresora,
             this.cboEtiqueta,
             this.cboMedidaEtiqueta,
-            this.mnuConfiguracion});
+            this.mnuConfiguracion,
+            this.subMnuPerfilEditar,
+            this.subMnuPerfilUsuarios,
+            this.subMnuPerfilUsuariosPerfiles,
+            this.subMnuPerfilUsuariosAdministrar,
+            this.subMnuPerfilCerrarSesion,
+            this.subMnuPerfilSalir,
+            this.mnuSkin,
+            this.subMnuSkinList,
+            this.subMnuSkinPaleta,
+            this.mnuBarrasMenu,
+            this.subMnuBarrasMenu,
+            this.btnActualizarPermisos,
+            this.btnConfiguracion,
+            this.btnCifrar,
+            this.btnAcercaDe});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 18;
+            this.barManager1.MaxItemId = 33;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryCboSucursal,
             this.repositoryPgbAvance,
@@ -154,6 +184,7 @@
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.UseWholeRow = true;
             this.bar1.Text = "Herramientas";
+            this.bar1.Visible = false;
             // 
             // btnInicio
             // 
@@ -221,11 +252,55 @@
             // mnuPerfil
             // 
             this.mnuPerfil.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.mnuPerfil.Caption = "Per&fil";
+            this.mnuPerfil.Caption = "User";
             this.mnuPerfil.Id = 9;
             this.mnuPerfil.ImageOptions.SvgImage = global::CapaPresentacion.Properties.Resources.Perfil;
+            this.mnuPerfil.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuPerfilEditar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuPerfilUsuarios),
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuPerfilCerrarSesion),
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuPerfilSalir)});
             this.mnuPerfil.Name = "mnuPerfil";
-            this.mnuPerfil.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
+            this.mnuPerfil.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // subMnuPerfilEditar
+            // 
+            this.subMnuPerfilEditar.Caption = "&Editar";
+            this.subMnuPerfilEditar.Id = 18;
+            this.subMnuPerfilEditar.Name = "subMnuPerfilEditar";
+            // 
+            // subMnuPerfilUsuarios
+            // 
+            this.subMnuPerfilUsuarios.Caption = "&Usuarios";
+            this.subMnuPerfilUsuarios.Id = 19;
+            this.subMnuPerfilUsuarios.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuPerfilUsuariosPerfiles),
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuPerfilUsuariosAdministrar)});
+            this.subMnuPerfilUsuarios.Name = "subMnuPerfilUsuarios";
+            // 
+            // subMnuPerfilUsuariosPerfiles
+            // 
+            this.subMnuPerfilUsuariosPerfiles.Caption = "&Perfiles";
+            this.subMnuPerfilUsuariosPerfiles.Id = 20;
+            this.subMnuPerfilUsuariosPerfiles.Name = "subMnuPerfilUsuariosPerfiles";
+            // 
+            // subMnuPerfilUsuariosAdministrar
+            // 
+            this.subMnuPerfilUsuariosAdministrar.Caption = "&Administrar";
+            this.subMnuPerfilUsuariosAdministrar.Id = 21;
+            this.subMnuPerfilUsuariosAdministrar.Name = "subMnuPerfilUsuariosAdministrar";
+            // 
+            // subMnuPerfilCerrarSesion
+            // 
+            this.subMnuPerfilCerrarSesion.Caption = "&Cerrar sesión";
+            this.subMnuPerfilCerrarSesion.Id = 22;
+            this.subMnuPerfilCerrarSesion.Name = "subMnuPerfilCerrarSesion";
+            // 
+            // subMnuPerfilSalir
+            // 
+            this.subMnuPerfilSalir.Caption = "&Salir";
+            this.subMnuPerfilSalir.Id = 23;
+            this.subMnuPerfilSalir.Name = "subMnuPerfilSalir";
             // 
             // cboSucursal
             // 
@@ -240,6 +315,8 @@
             this.repositoryCboSucursal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Seleccionar sucursal", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboSucursal.Name = "repositoryCboSucursal";
+            this.repositoryCboSucursal.NullText = "[Elegir]";
+            this.repositoryCboSucursal.PopupSizeable = false;
             // 
             // bar2
             // 
@@ -271,6 +348,7 @@
             this.bar3.OptionsBar.DrawDragBorder = false;
             this.bar3.OptionsBar.UseWholeRow = true;
             this.bar3.Text = "Barra de estado";
+            this.bar3.Visible = false;
             // 
             // pgbAvance
             // 
@@ -310,6 +388,8 @@
             this.repositoryCboImpresora.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Seleccionar impresora", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboImpresora.Name = "repositoryCboImpresora";
+            this.repositoryCboImpresora.NullText = "[Elegir]";
+            this.repositoryCboImpresora.PopupSizeable = false;
             // 
             // cboEtiqueta
             // 
@@ -324,6 +404,8 @@
             this.repositoryCboEtiqueta.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "combo", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Seleccionar etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboEtiqueta.Name = "repositoryCboEtiqueta";
+            this.repositoryCboEtiqueta.NullText = "[Elegir]";
+            this.repositoryCboEtiqueta.PopupSizeable = false;
             // 
             // cboMedidaEtiqueta
             // 
@@ -338,14 +420,81 @@
             this.repositoryCboMedidaEtiqueta.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "Combo", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "Seleccionar medida etiqueta", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryCboMedidaEtiqueta.Name = "repositoryCboMedidaEtiqueta";
+            this.repositoryCboMedidaEtiqueta.NullText = "[Elegir]";
+            this.repositoryCboMedidaEtiqueta.PopupSizeable = false;
             // 
             // mnuConfiguracion
             // 
             this.mnuConfiguracion.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.mnuConfiguracion.Hint = "Administrar configuración";
             this.mnuConfiguracion.Id = 17;
             this.mnuConfiguracion.ImageOptions.SvgImage = global::CapaPresentacion.Properties.Resources.Config;
+            this.mnuConfiguracion.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnuSkin),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnuBarrasMenu),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnActualizarPermisos),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnConfiguracion),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCifrar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAcercaDe)});
             this.mnuConfiguracion.Name = "mnuConfiguracion";
             this.mnuConfiguracion.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
+            // 
+            // mnuSkin
+            // 
+            this.mnuSkin.Caption = "&Skin";
+            this.mnuSkin.Id = 24;
+            this.mnuSkin.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuSkinList),
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuSkinPaleta)});
+            this.mnuSkin.Name = "mnuSkin";
+            // 
+            // subMnuSkinList
+            // 
+            this.subMnuSkinList.Id = 25;
+            this.subMnuSkinList.Name = "subMnuSkinList";
+            // 
+            // subMnuSkinPaleta
+            // 
+            this.subMnuSkinPaleta.Id = 26;
+            this.subMnuSkinPaleta.Name = "subMnuSkinPaleta";
+            // 
+            // mnuBarrasMenu
+            // 
+            this.mnuBarrasMenu.Caption = "&Barras de menú";
+            this.mnuBarrasMenu.Id = 27;
+            this.mnuBarrasMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.subMnuBarrasMenu)});
+            this.mnuBarrasMenu.Name = "mnuBarrasMenu";
+            // 
+            // subMnuBarrasMenu
+            // 
+            this.subMnuBarrasMenu.Caption = "barToolbarsListItem1";
+            this.subMnuBarrasMenu.Id = 28;
+            this.subMnuBarrasMenu.Name = "subMnuBarrasMenu";
+            // 
+            // btnActualizarPermisos
+            // 
+            this.btnActualizarPermisos.Caption = "&Actualizar permisos";
+            this.btnActualizarPermisos.Id = 29;
+            this.btnActualizarPermisos.Name = "btnActualizarPermisos";
+            // 
+            // btnConfiguracion
+            // 
+            this.btnConfiguracion.Caption = "&Configuración";
+            this.btnConfiguracion.Id = 30;
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            // 
+            // btnCifrar
+            // 
+            this.btnCifrar.Caption = "&Cifrar";
+            this.btnCifrar.Id = 31;
+            this.btnCifrar.Name = "btnCifrar";
+            // 
+            // btnAcercaDe
+            // 
+            this.btnAcercaDe.Caption = "Acerca de...";
+            this.btnAcercaDe.Id = 32;
+            this.btnAcercaDe.Name = "btnAcercaDe";
             // 
             // barAndDockingController1
             // 
@@ -451,7 +600,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryCboSucursal;
         private DevExpress.XtraBars.BarEditItem pgbAvance;
         private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryPgbAvance;
-        private DevExpress.XtraBars.BarStaticItem lblMensaje;
         private DevExpress.XtraBars.BarStaticItem lblIVA;
         private DevExpress.XtraBars.BarEditItem cboImpresora;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryCboImpresora;
@@ -460,5 +608,21 @@
         private DevExpress.XtraBars.BarEditItem cboMedidaEtiqueta;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryCboMedidaEtiqueta;
         private DevExpress.XtraBars.BarSubItem mnuConfiguracion;
+        public DevExpress.XtraBars.BarStaticItem lblMensaje;
+        private DevExpress.XtraBars.BarButtonItem subMnuPerfilEditar;
+        private DevExpress.XtraBars.BarSubItem subMnuPerfilUsuarios;
+        private DevExpress.XtraBars.BarButtonItem subMnuPerfilUsuariosPerfiles;
+        private DevExpress.XtraBars.BarButtonItem subMnuPerfilUsuariosAdministrar;
+        private DevExpress.XtraBars.BarButtonItem subMnuPerfilCerrarSesion;
+        private DevExpress.XtraBars.BarButtonItem subMnuPerfilSalir;
+        private DevExpress.XtraBars.BarSubItem mnuSkin;
+        private DevExpress.XtraBars.SkinDropDownButtonItem subMnuSkinList;
+        private DevExpress.XtraBars.SkinPaletteDropDownButtonItem subMnuSkinPaleta;
+        private DevExpress.XtraBars.BarSubItem mnuBarrasMenu;
+        private DevExpress.XtraBars.BarToolbarsListItem subMnuBarrasMenu;
+        private DevExpress.XtraBars.BarButtonItem btnActualizarPermisos;
+        private DevExpress.XtraBars.BarButtonItem btnConfiguracion;
+        private DevExpress.XtraBars.BarButtonItem btnCifrar;
+        private DevExpress.XtraBars.BarButtonItem btnAcercaDe;
     }
 }

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
-using DevExpress.Skins;
-using DevExpress.LookAndFeel;
 
 namespace CapaPresentacion
 {
@@ -18,7 +13,16 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAcceso());
+
+            // Realizo la apertura del formulario para validar el login
+            // esta tarea es previa al inicio de la aplicacion            
+            /*FrmAcceso acceso = new FrmAcceso();
+            acceso.ShowDialog();*/
+
+            // Si el login es correcto, procedo con la apetura normal
+            // de la aplicacion            
+            //if (acceso.DialogResult == DialogResult.OK)
+                Application.Run(new FrmPrincipal());
         }
     }
 }

@@ -41,6 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EExplorador.cs" />
+    <Compile Include="EFiltroExplorador.cs" />
+    <Compile Include="EGestores.cs" />
+    <Compile Include="EImpresoras.cs" />
+    <Compile Include="EMedidaEtiqueta.cs" />
+    <Compile Include="ESociedades.cs" />
+    <Compile Include="ESucursales.cs" />
+    <Compile Include="EUsuarios.cs" />
+    <Compile Include="EVersionEtiqueta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

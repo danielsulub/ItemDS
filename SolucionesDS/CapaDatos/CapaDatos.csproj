@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,7 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DExplorador.cs" />
+    <Compile Include="DFiltroExplorador.cs" />
+    <Compile Include="DGestores.cs" />
+    <Compile Include="DImpresoras.cs" />
+    <Compile Include="DMedidaEtiqueta.cs" />
     <Compile Include="DSociedades.cs" />
+    <Compile Include="DSucursales.cs" />
+    <Compile Include="DUsuarios.cs" />
+    <Compile Include="DVersionEtiqueta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

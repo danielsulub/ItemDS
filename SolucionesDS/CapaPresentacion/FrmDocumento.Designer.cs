@@ -64,8 +64,6 @@
             this.pnlFondo.Controls.Add(this.pnlEncabezado);
             this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFondo.Location = new System.Drawing.Point(0, 0);
-            this.pnlFondo.LookAndFeel.SkinName = "Office 2019 Colorful";
-            this.pnlFondo.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlFondo.Name = "pnlFondo";
             this.pnlFondo.Size = new System.Drawing.Size(1016, 444);
             this.pnlFondo.TabIndex = 0;
@@ -93,8 +91,16 @@
             // 
             // gridDocumento
             // 
+            this.gridDocumento.ActiveFilterEnabled = false;
+            this.gridDocumento.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridDocumento.GridControl = this.grdDocumento;
             this.gridDocumento.Name = "gridDocumento";
+            this.gridDocumento.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridDocumento.OptionsSelection.MultiSelect = true;
+            this.gridDocumento.OptionsView.ShowDetailButtons = false;
+            this.gridDocumento.OptionsView.ShowGroupExpandCollapseButtons = false;
+            this.gridDocumento.OptionsView.ShowGroupPanel = false;
+            this.gridDocumento.OptionsView.ShowIndicator = false;
             // 
             // pnlEncabezado
             // 
@@ -112,7 +118,7 @@
             // 
             this.lblBuscar.Location = new System.Drawing.Point(5, 11);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(32, 13);
+            this.lblBuscar.Size = new System.Drawing.Size(33, 13);
             this.lblBuscar.TabIndex = 2;
             this.lblBuscar.Text = "Buscar";
             // 

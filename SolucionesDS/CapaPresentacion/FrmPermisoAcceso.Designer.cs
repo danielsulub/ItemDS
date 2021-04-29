@@ -147,6 +147,7 @@ namespace CapaPresentacion
             this.ClientSize = new System.Drawing.Size(1016, 444);
             this.Controls.Add(this.pnlFondo);
             this.Name = "FrmPermisoAcceso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso restringido";
             this.Load += new System.EventHandler(this.FrmPermisoAcceso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlFondo)).EndInit();

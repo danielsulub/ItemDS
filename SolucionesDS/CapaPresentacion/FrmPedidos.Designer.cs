@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlFondo = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFondo)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnlFondo
+            // 
+            this.pnlFondo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFondo.Location = new System.Drawing.Point(0, 0);
+            this.pnlFondo.Name = "pnlFondo";
+            this.pnlFondo.Size = new System.Drawing.Size(1016, 444);
+            this.pnlFondo.TabIndex = 0;
             // 
             // FrmPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 444);
+            this.Controls.Add(this.pnlFondo);
             this.Name = "FrmPedidos";
-            this.Text = "FrmPedidos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pedidos";
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private DevExpress.XtraEditors.PanelControl pnlFondo;
     }
 }

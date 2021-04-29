@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 
 namespace CapaPresentacion
 {
@@ -16,6 +7,11 @@ namespace CapaPresentacion
         public FrmExistencias()
         {
             InitializeComponent();
+        }
+
+        private void FrmExistencias_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

@@ -34,6 +34,7 @@ namespace CapaPresentacion
             // 
             // lblMensaje
             // 
+            this.lblMensaje.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensaje.Location = new System.Drawing.Point(418, 68);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(40, 13);

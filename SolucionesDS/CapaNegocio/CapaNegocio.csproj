@@ -41,6 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NExplorador.cs" />
+    <Compile Include="NFiltroExplorador.cs" />
+    <Compile Include="NGestores.cs" />
+    <Compile Include="NImpresoras.cs" />
+    <Compile Include="NMedidaEtiqueta.cs" />
+    <Compile Include="NSociedades.cs" />
+    <Compile Include="NSucursales.cs" />
+    <Compile Include="NUsuarios.cs" />
+    <Compile Include="NVersionEtiqueta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,24 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraBars;
-using CapaPresentacion.Properties;
+﻿using CapaPresentacion.Properties;
 using DevExpress.LookAndFeel;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using System;
+using System.ComponentModel;
+using System.Configuration;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using CapaEntidad;
+using CapaNegocio;
+using System.Collections.Generic;
+
 
 namespace CapaPresentacion
 {
     public partial class FrmPrincipal : XtraForm
     {
-        private string nombreSistema = "ItemDS";
-        private string nombreSkin = "McSkin";
+        private string nombreSistema = "ItemDS";        
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -26,64 +27,170 @@ namespace CapaPresentacion
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            //Tamaño del form principal: 1020, 580            
-            LookAndFeel.SkinName = nombreSkin;
-            CambiarAppearanceFocused();
+            //Tamaño del form principal: 1020, 580
             Text = nombreSistema;
             Tag = nombreSistema;
-            pgbAvance.Visibility = BarItemVisibility.Never;
-            bar1.Visible = true; //Barra de herramientas
-            bar2.Visible = false; //Barra de menus
             Icon = Resources.ItemDS;
-            mostrarMensaje("Hola, Bienvenido al sistema", Color.Empty);            
-            
-            UserLookAndFeel.Default.SetSkinStyle("Office 2019 Colorful"); //Skin de los controles internos de la pantalla
-            LookAndFeel.SkinName = "McSkin"; //Skin de la pantalla principal
-            barAndDockingController1.LookAndFeel.SkinName = "McSkin";            
+
+            //UserLookAndFeel.Default.SetSkinStyle(ConfigurationManager.AppSettings.Get("nombreSkin")); //Skin de los controles internos de la pantalla
+            LookAndFeel.SkinName = ConfigurationManager.AppSettings.Get("nombreSkinVentana"); //Skin de la pantalla principal
+            barAndDockingController1.LookAndFeel.SkinName = ConfigurationManager.AppSettings.Get("nombreSkin");
             pnlContenedorFrm.LookAndFeel.SkinName = UserLookAndFeel.Default.SkinName;
-        }
+            
+            CambiarAppearanceFocused();
+
+            pgbAvance.Visibility = BarItemVisibility.Never;
+
+            bar1.Visible = true; //Barra de herramientas
+            bar3.Visible = true; //Barra de estado
+            bar2.Visible = false; //Barra de menus
+            string numFormulario = ConfigurationManager.AppSettings.Get("NumeroFormularioInicial");
+            if (!string.IsNullOrWhiteSpace(numFormulario))
+            {
+                if (numFormulario.All(char.IsDigit))
+                {
+                    AbrirNumFormulario(Convert.ToInt16(ConfigurationManager.AppSettings.Get("NumeroFormularioInicial")));
+                }
+            }
+
+            ObtenerSucursales();
+            ObtenerImpresoras();
+            ObtenerVersionEtiquetas();
+            ObtenerMedidaEtiquetas();
+            if (repositoryCboSucursal.DataSource != null) EstablecerSucursal();
+            if (repositoryCboImpresora.DataSource != null) EstablecerImpresora();
+            if (repositoryCboEtiqueta.DataSource != null) EstablecerVersionEtiqueta();
+            if (repositoryCboMedidaEtiqueta.DataSource != null) EstablecerMedidaEtiqueta();
+        }        
 
         public void CambiarAppearanceFocused()
         {
-            string backColorRGB = "255,255,192";
-            string foreColorRGB = "64,64,64";
+            var backColorFocus = StringToColor(ConfigurationManager.AppSettings.Get("BackColorFocus"));
+            var foreColorFocus = StringToColor(ConfigurationManager.AppSettings.Get("ForeColorFocus"));
 
-            int backColorR;
-            int backColorG;
-            int backColorB;
+            cboSucursal.Edit.AppearanceFocused.BackColor = backColorFocus;
+            cboSucursal.Edit.AppearanceFocused.ForeColor = foreColorFocus;
 
-            int foreColorR;
-            int foreColorG;
-            int foreColorB;
+            cboImpresora.Edit.AppearanceFocused.BackColor = backColorFocus;
+            cboImpresora.Edit.AppearanceFocused.ForeColor = foreColorFocus;
 
-            string[] coloresRGBBackColor = backColorRGB.Split(',');
-            string[] coloresRGBForeColor = foreColorRGB.Split(',');
+            cboEtiqueta.Edit.AppearanceFocused.BackColor = backColorFocus;
+            cboEtiqueta.Edit.AppearanceFocused.ForeColor = foreColorFocus;
 
-            backColorR = Convert.ToInt32(coloresRGBBackColor[0]);
-            backColorG = Convert.ToInt32(coloresRGBBackColor[1]);
-            backColorB = Convert.ToInt32(coloresRGBBackColor[2]);
-
-            foreColorR = Convert.ToInt32(coloresRGBForeColor[0]);
-            foreColorG = Convert.ToInt32(coloresRGBForeColor[1]);
-            foreColorB = Convert.ToInt32(coloresRGBForeColor[2]);
-
-            cboSucursal.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
-            cboSucursal.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
-
-            cboImpresora.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
-            cboImpresora.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
-
-            cboEtiqueta.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
-            cboEtiqueta.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
-
-            cboMedidaEtiqueta.Edit.AppearanceFocused.BackColor = Color.FromArgb(backColorR, backColorG, backColorB);
-            cboMedidaEtiqueta.Edit.AppearanceFocused.ForeColor = Color.FromArgb(foreColorR, foreColorG, foreColorB);
+            cboMedidaEtiqueta.Edit.AppearanceFocused.BackColor = backColorFocus;
+            cboMedidaEtiqueta.Edit.AppearanceFocused.ForeColor = foreColorFocus;
         }
 
         private void barAndDockingController1_Changed(object sender, EventArgs e)
         {
             barAndDockingController1.LookAndFeel.SkinName = UserLookAndFeel.Default.SkinName;
             pnlContenedorFrm.LookAndFeel.SkinName = UserLookAndFeel.Default.SkinName;
+        }
+
+        private void ObtenerSucursales()
+        {
+            repositoryCboSucursal.DataSource = null;
+            cboSucursal.EditValue = null;            
+            repositoryCboSucursal.Columns.Clear();
+
+            NSucursales objNSucursales = new NSucursales();
+            List<ESucursales> sucursales = objNSucursales.ObtenerSucursales();
+            if (sucursales == null) { return; }
+            if (sucursales.Count > 0)
+            {
+                repositoryCboSucursal.DropDownRows = (sucursales.Count < 7) ? sucursales.Count : 7;
+                repositoryCboSucursal.DataSource = sucursales;
+                repositoryCboSucursal.DisplayMember = "Nombre";
+                repositoryCboSucursal.ValueMember = "Codigo";
+                repositoryCboSucursal.Columns.Add(new LookUpColumnInfo("Codigo", "Número"));
+                repositoryCboSucursal.Columns.Add(new LookUpColumnInfo("Nombre", "Nombre"));
+            }
+            else
+                MessageBox.Show("No existen sucursales activas en esa sociedad.");
+        }
+
+        private void ObtenerImpresoras()
+        {
+            repositoryCboImpresora.DataSource = null;
+            cboImpresora.EditValue = null;
+            repositoryCboImpresora.Columns.Clear();
+            repositoryCboImpresora.ShowHeader = false;
+            repositoryCboImpresora.ShowFooter = false;
+
+            NImpresoras objNImpresoras = new NImpresoras();
+            List<EImpresoras> impresoras = objNImpresoras.ObtenerImpresoras();            
+            if (impresoras.Count > 0)
+            {
+                repositoryCboImpresora.DropDownRows = (impresoras.Count < 7) ? impresoras.Count : 7;
+                repositoryCboImpresora.DataSource = impresoras;
+                repositoryCboImpresora.DisplayMember = "Nombre";
+                repositoryCboImpresora.ValueMember = "IdImpresora";                
+                repositoryCboImpresora.Columns.Add(new LookUpColumnInfo("Nombre", "Nombre"));
+            }
+            else
+                MessageBox.Show("No existen impresoras.");
+        }
+
+        private void ObtenerVersionEtiquetas()
+        {
+            repositoryCboEtiqueta.DataSource = null;
+            cboEtiqueta.EditValue = null;            
+            repositoryCboEtiqueta.Columns.Clear();
+
+            NVersionEtiqueta objNVersionEtiqueta = new NVersionEtiqueta();
+            List<EVersionEtiqueta> versionesEtiqueta = objNVersionEtiqueta.ObtenerVersionEtiqueta(Convert.ToInt16(ConfigurationManager.AppSettings.Get("IdSociedad")));            
+            if (versionesEtiqueta.Count > 0)
+            {
+                repositoryCboEtiqueta.DropDownRows = (versionesEtiqueta.Count < 7) ? versionesEtiqueta.Count : 7;
+                repositoryCboEtiqueta.DataSource = versionesEtiqueta;
+                repositoryCboEtiqueta.DisplayMember = "Nombre";
+                repositoryCboEtiqueta.ValueMember = "IdVersionEtiqueta";                
+                repositoryCboEtiqueta.Columns.Add(new LookUpColumnInfo("Nombre", "Nombre"));
+            }
+            else
+                MessageBox.Show("No existen etiquetas para la sociedad actual.");
+        }
+
+        private void ObtenerMedidaEtiquetas()
+        {
+            repositoryCboMedidaEtiqueta.DataSource = null;
+            cboMedidaEtiqueta.EditValue = null;
+            repositoryCboMedidaEtiqueta.Columns.Clear();
+            repositoryCboMedidaEtiqueta.ShowHeader = false;
+            repositoryCboMedidaEtiqueta.ShowFooter = false;
+
+            NMedidaEtiqueta objNMedidaEtiqueta = new NMedidaEtiqueta();
+            List<EMedidaEtiqueta> medidaEtiquetas = objNMedidaEtiqueta.ObtenerMedidaEtiqueta();            
+            if (medidaEtiquetas.Count > 0)
+            {
+                repositoryCboMedidaEtiqueta.DropDownRows = (medidaEtiquetas.Count < 7) ? medidaEtiquetas.Count : 7;
+                repositoryCboMedidaEtiqueta.DataSource = medidaEtiquetas;
+                repositoryCboMedidaEtiqueta.DisplayMember = "Nombre";
+                repositoryCboMedidaEtiqueta.ValueMember = "IdMedidaEtiqueta";                
+                repositoryCboMedidaEtiqueta.Columns.Add(new LookUpColumnInfo("Nombre", "Nombre"));
+            }
+            else
+                MessageBox.Show("No existen medida de etiquetas.");
+        }
+
+        private void EstablecerSucursal()
+        {
+            cboSucursal.EditValue = ConfigurationManager.AppSettings.Get("CodigoSucursal");
+        }
+
+        private void EstablecerImpresora()
+        {
+            cboImpresora.EditValue = Convert.ToInt16(ConfigurationManager.AppSettings.Get("IdImpresora"));
+        }
+
+        private void EstablecerVersionEtiqueta()
+        {
+            cboEtiqueta.EditValue = Convert.ToInt16(ConfigurationManager.AppSettings.Get("IdVersionEtiqueta"));
+        }
+
+        private void EstablecerMedidaEtiqueta()
+        {
+            cboMedidaEtiqueta.EditValue = Convert.ToInt16(ConfigurationManager.AppSettings.Get("IdMedidaEtiqueta"));
         }
 
         private void btnInicio_ItemClick(object sender, ItemClickEventArgs e)
@@ -103,42 +210,73 @@ namespace CapaPresentacion
 
         private void btnProducto_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmProducto>();
+            AbrirNumFormulario(1);
         }
 
         private void btnDocumento_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmDocumento>();
+            AbrirNumFormulario(2);
         }
 
         private void btnPeriodo_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmPeriodo>();
+            AbrirNumFormulario(3);
         }
 
         private void btnExplorador_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmExplorador>();
+            AbrirNumFormulario(4);
         }
 
         private void btnPedidos_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmPedidos>();
+            AbrirNumFormulario(5);
         }
 
         private void btnInventario_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmInventario>();
+            AbrirNumFormulario(6);
         }
 
         private void btnChecadorPrecios_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmChecador>();
+            AbrirNumFormulario(7);
         }
 
         private void btnReportes_ItemClick(object sender, ItemClickEventArgs e)
         {
-            abrirFormulario<FrmReportes>();            
+            AbrirNumFormulario(8);            
+        }
+
+        private void AbrirNumFormulario(short numFormulario)
+        {
+            switch (numFormulario)
+            {
+                case 1:
+                    abrirFormulario<FrmProducto>();
+                    break;
+                case 2:
+                    abrirFormulario<FrmDocumento>();
+                    break;
+                case 3:
+                    abrirFormulario<FrmPeriodo>();
+                    break;
+                case 4:
+                    abrirFormulario<FrmExplorador>();
+                    break;
+                case 5:
+                    abrirFormulario<FrmPedidos>();
+                    break;
+                case 6:
+                    abrirFormulario<FrmInventario>();
+                    break;
+                case 7:
+                    abrirFormulario<FrmChecador>();
+                    break;
+                case 8:
+                    abrirFormulario<FrmReportes>();
+                    break;
+            }
         }
 
         private void abrirFormulario<miForm>() where miForm : XtraForm, new()
@@ -151,7 +289,7 @@ namespace CapaPresentacion
             {
                 frm = new miForm();
                 AddOwnedForm(frm); //Nuevo borrar
-                frm.TopLevel = false;                
+                frm.TopLevel = false;
                 frm.Size = Size; //frm.Size = pnlContenedorFrm.Size;
                 frm.FormBorderStyle = FormBorderStyle.None;
                 frm.Dock = DockStyle.Fill;
@@ -188,6 +326,13 @@ namespace CapaPresentacion
             lblMensaje.ItemAppearance.Normal.BackColor = colorCinta;
             lblIVA.ItemAppearance.Normal.BackColor = colorCinta;
             bar3.BarAppearance.Normal.BackColor = colorCinta;
+        }
+
+        public static Color StringToColor(string colorStr)
+        {
+            TypeConverter cc = TypeDescriptor.GetConverter(typeof(Color));
+            var result = (Color)cc.ConvertFromString(colorStr);
+            return result;
         }
     }
 }
